@@ -1,5 +1,6 @@
 const boton = document.getElementById("boton");
 const datosFinales = document.getElementById("resultado");
+//c
 
 boton.addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value;
