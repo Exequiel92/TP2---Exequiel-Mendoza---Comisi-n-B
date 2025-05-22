@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 6</title>
+    <link rel="stylesheet" href="Ejercicio-6.css" />
+  </head>
+  <body>
+    <h1>DATOS PERSONALES</h1>
+
+    <div>
+      <h2>
+        Nombre:
+        <span><input id="nombre" type="text" maxlength="50" /></span>
+      </h2>
+    </div>
+
+    <div>
+      <h2>
+        Apellido:
+        <span
+          ><input id="apellido" type="text" minlength="1" maxlength="50"
+        /></span>
+      </h2>
+    </div>
+
+    <div>
+      <h2>
+        Edad:
+        <span><input id="edad" type="number" min="0" /></span>
+      </h2>
+    </div>
+
+    <div>
+      <h2>
+        Altura (en centímetros):
+        <span><input id="altura" type="number" min="0" max="230" /></span>
+      </h2>
+    </div>
+
+    <div>
+      <h2>
+        Correo Electrónico:
+        <span
+          ><input
+            id="correoElectronico"
+            type="text"
+            minlength="1"
+            maxlength="50"
+        /></span>
+      </h2>
+    </div>
+
+    <div>
+      <button id="boton">Enviar</button>
+    </div>
+
+    <div>
+      <h2>Datos personales:</h2>
+      <p id="resultado"></p>
+    </div>
+
+    <script src="Ejercicio-6.js"></script>
+  </body>
+</html>

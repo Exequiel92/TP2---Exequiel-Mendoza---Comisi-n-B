@@ -1,0 +1,104 @@
+/* Estilo general */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f5;
+  color: #880e4f;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+h1 {
+  color: #ad1457;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Subtítulos */
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #c2185b;
+}
+
+/* Contenedores */
+div {
+  background-color: #fce4ec;
+  border: 1px solid #f8bbd0;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(236, 64, 122, 0.2);
+  margin: 0.5rem 0;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Inputs */
+input {
+  padding: 0.5rem;
+  border: 1px solid #f06292;
+  border-radius: 8px;
+  width: 200px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #880e4f;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Asegura el centrado de inputs */
+span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Botón "Enviar" */
+button#boton {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ec407a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button#boton:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+button#boton:active {
+  background-color: #ad1457;
+  transform: scale(0.98);
+}
+
+/* Párrafo de datos personales */
+#datos {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d81b60;
+  text-align: center;
+  padding: 1rem;
+  border: 2px dashed #f48fb1;
+  background-color: #fce4ec;
+  border-radius: 10px;
+  width: 100%;
+}
+
+p {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #c2185b;
+}
