@@ -6,22 +6,9 @@ boton.addEventListener("click", () => {
   const estatura = Number(document.getElementById("estatura").value);
   const imc = peso / (estatura * estatura);
 
-  if (peso > 300) {
-    window.alert("ERROR: uno o ambos valores ingresados no son válidos");
+  if (peso < 300 && peso > 0 && estatura < 2.5 && estatura > 0) {
+    resultado.textContent = `Tu IMC es: ${imc}`;
   } else {
-    if (peso < 45) {
-      window.alert("ERROR: uno o ambos valores ingresados no son válidos");
-    } else {
-      if (estatura > 2.5) {
-        window.alert("ERROR: uno o ambos valores ingresados no son válidos");
-      } else {
-        if (estatura < 1.5) {
-          window.alert("ERROR: uno o ambos valores ingresados no son válidos");
-        } else {
-          console.log(imc);
-          resultado.textContent = `Tu IMC es: ${imc}`;
-        }
-      }
-    }
+    window.alert("ERROR: uno o ambos valores ingresados no son válidos");
   }
 });

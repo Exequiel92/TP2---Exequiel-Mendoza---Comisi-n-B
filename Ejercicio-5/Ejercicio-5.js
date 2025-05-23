@@ -2,35 +2,25 @@ const boton = document.getElementById("boton");
 const resultado = document.getElementById("resultado");
 
 boton.addEventListener("click", () => {
-  const baseTriangulo = Number(document.getElementById("baseTriangulo").value);
+  const base = Number(document.getElementById("base").value);
+
   const alturaTriangulo = Number(
     document.getElementById("alturaTriangulo").value
   );
-  const baseRectangulo = Number(
-    document.getElementById("baseRectangulo").value
-  );
+
   const alturaRectangulo = Number(
     document.getElementById("alturaRectangulo").value
   );
-  const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-  const areaRectangulo = baseRectangulo * alturaRectangulo;
+
+  const areaTriangulo = (base * alturaTriangulo) / 2;
+
+  const areaRectangulo = base * alturaRectangulo;
 
   const areaTotal = areaRectangulo + areaTriangulo;
-  if (baseTriangulo <= 0) {
-    window.alert("ERROR: uno o más valores ingresados no son válidos");
+
+  if (base > 0 && alturaRectangulo > 0 && alturaTriangulo > 0) {
+    resultado.textContent = `El área total es: ${areaTotal} metros`;
   } else {
-    if (alturaTriangulo <= 0) {
-      window.alert("ERROR: uno o más valores ingresados no son válidos");
-    } else {
-      if (baseRectangulo <= 0) {
-        window.alert("ERROR: uno o más valores ingresados no son válidos");
-      } else {
-        if (alturaRectangulo <= 0) {
-          window.alert("ERROR: uno o más valores ingresados no son válidos");
-        } else {
-          resultado.textContent = `El área total es: ${areaTotal} metros`;
-        }
-      }
-    }
+    window.alert("ERROR: uno o más valores ingresados no son válidos");
   }
 });
