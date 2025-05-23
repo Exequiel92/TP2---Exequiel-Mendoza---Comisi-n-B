@@ -1,5 +1,10 @@
 const boton = document.getElementById("boton");
-const datosFinales = document.getElementById("resultado");
+
+const pNombre = document.getElementById("pNombre");
+const pApellido = document.getElementById("pApellido");
+const pEdad = document.getElementById("pEdad");
+const pAltura = document.getElementById("pAltura");
+const pCorreo = document.getElementById("pCorreo");
 
 boton.addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value;
@@ -8,39 +13,48 @@ boton.addEventListener("click", () => {
   const altura = Number(document.getElementById("altura").value);
   const correoElectronico = document.getElementById("correoElectronico").value;
 
-  if (
-    edad > 18 &&
-    edad < 120 &&
-    altura > 0 &&
-    altura < 230 &&
-    nombre.length > 0 &&
-    nombre.length < 51 &&
-    apellido.length > 0 &&
-    apellido.length < 51 &&
-    correoElectronico.length > 0 &&
-    correoElectronico.includes("@")
-  ) {
-    datosFinales.style.color = "green";
-    datosFinales.textContent = `Nombre: ${nombre}. Apellido: ${apellido}. Edad: ${edad} años. Altura: ${altura} cm. Correo electrónico: ${correoElectronico}`;
+  if (nombre.length > 0 && nombre.length < 51) {
+    pNombre.style.color = "green";
+    pNombre.textContent = `Nombre: ${nombre}`;
   } else {
-    if (
-      edad > 0 &&
-      edad < 18 &&
-      altura > 0 &&
-      altura < 230 &&
-      nombre.length > 0 &&
-      nombre.length < 51 &&
-      apellido.length > 0 &&
-      apellido.length < 51 &&
-      correoElectronico.length > 0 &&
-      correoElectronico.includes("@")
-    ) {
-      datosFinales.style.color = "green";
-      datosFinales.textContent = `Nombre: ${nombre}. Apellido: ${apellido}. Edad: !Menor de edad!. Altura: ${altura} cm. Correo Electrónico: ${correoElectronico}`;
+    pNombre.style.color = "red";
+    pNombre.textContent = `Nombre: Campo vacío`;
+  }
+
+  if (apellido.length > 0 && apellido.length < 51) {
+    pApellido.style.color = "green";
+    pApellido.textContent = `Apellido: ${apellido}`;
+  } else {
+    pApellido.style.color = "red";
+    pApellido.textContent = `Apellido: Campo vacío`;
+  }
+
+  if (edad > 17 && edad < 120) {
+    pEdad.style.color = "green";
+    pEdad.textContent = `Edad: ${edad} años`;
+  } else {
+    if (edad > 0 && edad < 18) {
+      pEdad.style.color = "red";
+      pEdad.textContent = `Edad: ${edad} años ¡ES MENOR DE EDAD!`;
     } else {
-      datosFinales.style.color = "red";
-      datosFinales.textContent =
-        "ERROR: Uno o más campos están vacíos y/o uno o más valores ingresados no son válidos.";
+      pEdad.style.color = "red";
+      pEdad.textContent = `Edad: Valor ingresado no válido`;
     }
+  }
+
+  if (altura >= 1 && altura < 230) {
+    pAltura.style.color = "green";
+    pAltura.textContent = `Altura: ${altura} cm.`;
+  } else {
+    pAltura.style.color = "red";
+    pAltura.textContent = `Altura: Valor ingresado no válido`;
+  }
+
+  if (correoElectronico.includes("@")) {
+    pCorreo.style.color = "green";
+    pCorreo.textContent = `Correo electrónico: ${correoElectronico}`;
+  } else {
+    pCorreo.style.color = "red";
+    pCorreo.textContent = `Correo electrónico: ¡ERROR! Ingrese "@"`;
   }
 });
